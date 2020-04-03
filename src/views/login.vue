@@ -4,10 +4,14 @@
       class="demo-ruleForm login-page">
       <h3 class="title">系统登录</h3>
       <el-form-item prop="username">
-        <el-input type="text" v-model="ruleForm2.username" auto-complete="off" placeholder="用户名"></el-input>
+        <el-input type="text" v-model="ruleForm2.username" auto-complete="off" placeholder="用户名">
+          <template slot="prepend"><span class="fa fa-user fa-lg" style="width: 13px"></span></template>
+        </el-input>
       </el-form-item>
       <el-form-item prop="password">
-        <el-input type='password' v-model='ruleForm2.password' auto-complete='off' placeholder='密码'></el-input>
+        <el-input type='password' v-model='ruleForm2.password' auto-complete='off' placeholder='密码'>
+          <template slot="prepend"><span class="fa fa-lock fa-lg" style="width: 13px"></span></template>
+        </el-input>
       </el-form-item>
       <el-checkbox v-model="checked" class="rememberme">记住密码</el-checkbox>
       <el-form-item style="width: 100%;">
